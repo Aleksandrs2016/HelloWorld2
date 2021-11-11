@@ -1,6 +1,6 @@
 package ua.com.foxminded.helloworld2;
 
-public class HelloWorld2 {
+public class HelloWorld2 extends CheckNumber {
 
 	public static void main(String[] args) {
 		float i = 6;
@@ -25,29 +25,16 @@ public class HelloWorld2 {
 			isMoreThanOne = false;
 		}
 
-/*		if (j % 2 == 0) {
-			evenNumber = true;
-		} else {
-			evenNumber = false;
-		}
-		System.out.println(evenNumber);
+		/*
+		 * if (j % 2 == 0) { evenNumber = true; } else { evenNumber = false; }
+		 * System.out.println(evenNumber);
+		 * 
+		 * if (i % 2 == 0) { evenNumber = true; } else { evenNumber = false; }
+		 * System.out.println(evenNumber);
+		 */
 
-		if (i % 2 == 0) {
-			evenNumber = true;
-		} else {
-			evenNumber = false;
-		}
-		System.out.println(evenNumber);
-*/		
-		
-		public static boolean evenNumber (int a) {
-			if (a == 0) {
-				evenNumber = true;
-			} else {
-				evenNumber = false;
-			}
-		}
-		
+		System.out.println(evenNumber((int) i));
+
 		result = answer + Integer.parseInt(number);
 		oneMoreAnswer = message + " " + result;
 
