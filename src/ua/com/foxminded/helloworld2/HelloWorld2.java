@@ -10,7 +10,6 @@ public class HelloWorld2 extends CheckNumber {
 		double d = 2.5;
 		int hugeNumber = 521124244;
 		boolean isMoreThanOne;
-//		boolean evenNumber;
 
 		String message = "Helo World!";
 		String stringAnswer = message + " " + answer;
@@ -33,7 +32,9 @@ public class HelloWorld2 extends CheckNumber {
 		 * System.out.println(evenNumber);
 		 */
 
-		System.out.println(evenNumber((int) i));
+
+		
+
 
 		result = answer + Integer.parseInt(number);
 		oneMoreAnswer = message + " " + result;
@@ -47,6 +48,16 @@ public class HelloWorld2 extends CheckNumber {
 		System.out.println(oneMoreAnswer);
 		System.out.println(hugeNumber % (int) i);
 		System.out.println(isMoreThanOne);
+		System.out.println(evenNumber((int) i));
+		System.out.println(evenNumber((int) j));
 	}
+	
+    static boolean evenNumber(int a) {
+        if (a % 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
