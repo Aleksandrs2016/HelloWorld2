@@ -1,6 +1,6 @@
 package ua.com.foxminded.helloworld2;
 
-public class HelloWorld2 extends CheckNumber {
+public class HelloWorld2 {
 
 	public static void main(String[] args) {
 		float i = 6;
@@ -10,6 +10,7 @@ public class HelloWorld2 extends CheckNumber {
 		double d = 2.5;
 		int hugeNumber = 521124244;
 		boolean isMoreThanOne;
+		boolean evenNumberIf;
 
 		String message = "Helo World!";
 		String stringAnswer = message + " " + answer;
@@ -24,17 +25,19 @@ public class HelloWorld2 extends CheckNumber {
 			isMoreThanOne = false;
 		}
 
-		/*
-		 * if (j % 2 == 0) { evenNumber = true; } else { evenNumber = false; }
-		 * System.out.println(evenNumber);
-		 * 
-		 * if (i % 2 == 0) { evenNumber = true; } else { evenNumber = false; }
-		 * System.out.println(evenNumber);
-		 */
+		if (j % 2 == 0) {
+			evenNumberIf = true;
+		} else {
+			evenNumberIf = false;
+		}
+		System.out.println((int) j + " Чётное число? (if..else) - " + evenNumberIf);
 
-
-		
-
+		if (i % 2 == 0) {
+			evenNumberIf = true;
+		} else {
+			evenNumberIf = false;
+		}
+		System.out.println((int) i + " Чётное число (if..else) - " + evenNumberIf);
 
 		result = answer + Integer.parseInt(number);
 		oneMoreAnswer = message + " " + result;
@@ -42,22 +45,20 @@ public class HelloWorld2 extends CheckNumber {
 		System.out.println(message);
 		System.out.println(words);
 		System.out.println(message + space + words);
-		System.out.println(answer);
-		System.out.println(i + j * d);
+		System.out.println((int) i + " / " + (int) j + " = " + answer);
+		System.out.println((int) i + " + " + (int) j + " * " + d + " = " + (i + j * d));
 		System.out.println(stringAnswer);
 		System.out.println(oneMoreAnswer);
-		System.out.println(hugeNumber % (int) i);
-		System.out.println(isMoreThanOne);
-		System.out.println(evenNumber((int) i));
-		System.out.println(evenNumber((int) j));
+		System.out.println("Остаток от деления 521124244 / " + (int) i + " = " + hugeNumber % (int) i);
+		System.out.println((int) j + " / " + (int) i + " > 1 ? " + isMoreThanOne);
+		System.out.println((int) i + " Чётное число (метод) - " + evenNumber((int) i));
+		System.out.println((int) j + " Чётное число (метод) - " + evenNumber((int) j));
 	}
-	
-    static boolean evenNumber(int a) {
-        if (a % 2 == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+
+	static boolean evenNumber(int a) {
+
+		return (a % 2 == 0);
+
+	}
 
 }
